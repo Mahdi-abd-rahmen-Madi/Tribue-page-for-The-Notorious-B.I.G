@@ -2,144 +2,87 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,300';
 
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box;}   
+li{text-decoration: none;}
 
-    
-body {
-    overflow:hidden;
-    background-image:url("https://images.pexels.com/photos/1047178/pexels-photo-1047178.jpeg");
-    background-repeat: no-repeat;
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 16px;
-    background-size:100%;
-    color: #181818;
-    
-    
+
+img{
+    width: 380px;
+    max-height: 380px;
+	padding:10px 0 0 10px;
+    transition: 0.2s ease-out;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+#img-caption,#tribute-info{display:none;visibility:hidden;padding:0;margin:0;border:none;content:"";}
+
+blockquote {
+	
+	border: none;
+	font-style: italic;
+	position:center;
 }
 
 
-
-img{display:block;
-    max-width: 400px;
-    max-height: 300px;
-    height:auto;
-    margin:0 ;
-    transition: opacity 0.2s ease-out;
-    border-radius:15px;
+main{
     overflow:hidden;
-    justify-content: center;
+	overflow-x: auto;
+    /*background-image: url("https://images.pexels.com/photos/1047178/pexels-photo-1047178.jpeg");*/
+   
+    display:flex;
+	flex-direction: row;   
+}
+
+body { background-image: url("https://images.pexels.com/photos/1047178/pexels-photo-1047178.jpeg");
+	background-size:cover;} 
+
+
+
+#about {width:380px;
+padding:7px;
+overflow:hidden;
+border-radius:20px;
+}
+#about :first-child {padding:5px;}
+
+.container p {margin: 0 5px; 
+	font-size: 11px;
+	letter-spacing: 0.1em;
+    line-height: 1.4em;
 }
 
 
 p {font-size: 1.1em;}
 
-/* blockquote {border: none;font-style: italic;position:center;}*/
-
-main{
-    background-color:white;
-    
-    overflow:hidden;
-    flex-direction:row;
-    background-image: url("https://images.pexels.com/photos/1047178/pexels-photo-1047178.jpeg");
-    background-size:fixed;
-    display:flex;
-    flex-direction:row;
-    row-gap:10px;
-    column-width: 25%;
-    
-
-
-}
-
-header h1, header h3, header h4 {
-	color: white;
-	font-family: 'Raleway', sans-serif;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
-
-
-#about {padding:0;
-	background-color: #F2F2F2;
-	position: relative;
-    max-width:450px;
-    height: 400px;
-
-
-}
-
-#about:after {
-	content: '';
-	display: block;  
-	border-top: 5px solid #F2F2F2;
-	border-right: 5px solid transparent;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid transparent;}
-
-#about p, .timeline p, .biggest-hits p, .death p {margin: 0 5px; 
-	font-size: 12px;
-	letter-spacing: 0.1em;
-  line-height: 1.5em;}
-
-b {font-weight: 600;
+b {font-weight: 1000;
 	color: #8F000A;
-	text-shadow: 0px 1px 1px rgba(0,0,0,0.1);}
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	
+}
 
 i {color: #303030;}
 
-
-.timeline{
-    width:100%;
-    height:100%;
-    background-color:#F2F2F2;
-    border: radius 12px;
-    overflow:hidden;
-    margin:0;
-    padding:5px;
-    justify-content: center;
-}
-
-.death{
-    background-color: #F2F2F2;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    border: radius 12px;
-    overflow:hidden;
-    margin:0 auto;
-    justify-content: center;
-}
-
-.biggest-hits{
-    background-color: #F2F2F2;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    border: radius 12px;
-    overflow:hidden;
-    margin:0 auto;
-    justify-content: center;
-}
-
-.content {
+.container {
   font-family: "Raleway", sans-serif;
-  background-color:white;
-  padding:20px;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right:0;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-  @media (min-width: 768px) {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }}
-.section {
+  
+  background:linear-gradient(45deg, snow, aliceblue);
+  padding:10px;
+  width: 90%;
+  position:relative;
+  margin-right:10px;
+  margin-left:10px;
+  margin-bottom:auto;
+  border-radius:20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.header {
 	text-align: center;
-	font-size: 3em;
-	margin: auto;
-	margin-bottom: 0.4em;
+	display:hidden;
+	font-size: 2em;
+	margin: 0;
 	color: #8F000A;
 }
 
@@ -151,81 +94,116 @@ i {color: #303030;}
 }
 
 #quote  {
-	padding: 60px 0;
+	border-radius: 10px;
+	margin-bottom:0;
 	background-color: #8F000A;
 	width: 100%;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: center;
-	    align-items: center;
-	-ms-flex-pack: center;
-	    justify-content: center;
+	justify-content: center;
 	color: #F2F2F2;
-}
-  
-#quote i {
-	color: #F2F2F2;
-	font-size: 3em;
-	padding-right: 10px;
 }
 
-#quote p {
-	font-size: 1.3em;
+
+
+blockquote p {
+	font-size: 2em;
+	line-height: 1.5em;
 	padding-left: 10px;
 	border-left: 2px solid #F2F2F2;
-	font-weight: 300;
+	font-weight: 700;
 }
 
-#quote-content {max-width: 30vw;}
+
   
   
   
 footer {
 	background-color: #420005;
 	width: 100%;
-	position: relative;
 	color: #F2F2F2;
 	text-align: center;
-	padding-bottom: 1.7em;
-}
-
-footer:before {
-	content: '';
-	display: block;  
-	position: absolute;
-	left: 0;
-	bottom: 100%;
-	width: 0;
-	height: 0;
-	border-bottom: 33px solid #420005;
-	border-right: 50vw solid transparent;
-	border-top: 0 solid transparent;
-	border-left: 50vw solid transparent;
+	max-height:8%;
 }
 
 footer h1 {
 	padding: 0.3em 0.7em;
-	font-weight: 300;
-	font-size: 2.5em;
+	font-weight: 500;
+	font-size: 20px;
 }
 
-footer h2 {
+footer h3 {
 	text-align: center;
 	padding: 0.1em 0.7em;
 	font-weight: 300;
-	font-size: 1.5em;
+	font-size: 16px;
 }
 
 footer a {
+	text-decoration:none;
 	color: #F2F2F2;
 }
 
-footer a:hover {
-	color: #F48484;
-	transition: 0.3s ease;
-}
 
 footer p {
-	font-size: 0.8em;
+	font-size: 12px;
 	padding-top: 0.6em;
 }
+
+
+
+
+.attribution { font-size: 20px; text-align: center;
+	color:white; 
+}
+	
+.attribution a { color: hsl(216, 74%, 60%);  }
+.attribution a:hover { color:  rgb(235, 91, 187) ;transition : 0.3s ease; }
+.attribution a:visited { color: rgb(146, 47, 212); }
+
+
+
+
+
+@media screen and (min-width:920px) {
+	footer {position:fixed;
+	bottom: 0;}
+}
+@media screen and (max-width: 920px) {
+	main  {display:block;
+	background-size: cover;
+	background-position: center;
+	image-rendering:optimizeSpeed;
+	
+	background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Frealtalk101radio.com%2Fwp-content%2Fuploads%2F2015%2F05%2Fbiggie.jpg&f=1&nofb=1");}
+	
+	body {height:110vh;}
+	#about {width:90%;}
+
+	.img-div {
+		display:flex;
+		flex-direction: column;
+		padding:5%;margin:0;
+		height:auto;width:auto;
+	}
+
+	img{display:none;
+
+		width:50%;
+		padding:10% 5% 5% 5%;
+		height:auto;
+		justify-content: center;
+		margin:0;
+	}
+	
+	.container {background:linear-gradient(45deg, snow, transparent);
+		background-color: aliceblue;
+		margin:0 auto 5% auto
+	}
+
+	.main:last-child{
+		margin-bottom:10%;
+	}
+
+	
+		
+	}
+
