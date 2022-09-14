@@ -165,10 +165,7 @@ footer p {
 
 
 
-@media screen and (min-width:920px) {
-	footer {position:fixed;
-	bottom: 0;}
-}
+
 @media screen and (max-width: 920px) {
 	main  {display:block;
 	background-size: cover;
